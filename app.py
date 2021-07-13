@@ -21,11 +21,6 @@ def home2():
     return render_template("index.html")
 
 
-# @app.route("/hitting")
-# def hitting():
-#     return render_template('hitting.html')
-
-
 @app.route("/prediction")
 def prediction():
     return render_template('prediction.html')
