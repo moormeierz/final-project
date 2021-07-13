@@ -8,3 +8,6 @@ This data was put through a random forest machine learning model to determine wh
 
 ![image](https://github.com/moormeierz/final-project/blob/main/images/random_forest.PNG?raw=true)
 
+
+![image](https://github.com/moormeierz/final-project/blob/main/images/application.PNG?raw=true)
+
