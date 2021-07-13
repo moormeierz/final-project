@@ -1,0 +1,34 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/* charts */
+.container{
+height: 100vh;
+}
+
+.chart-wrapper{
+width: 800px;
+height: 500px;
+margin: 0 auto;
+background: rgb(255, 255, 255);
+}
+
+
+
+/* table */
+table, th, td {
+  border: 1px solid black;
+}
+
+
+
+/* background image */
+body {
+  background-image: url("https://coolbackgrounds.io/images/backgrounds/white/white-triangle-369b8d2d.jpg");
+  /* background-image: url("https://www.valleycentral.com/wp-content/uploads/sites/39/2021/05/base.jpg"); */
+  background-color: #cccccc;
+ }

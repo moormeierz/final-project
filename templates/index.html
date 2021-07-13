@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Baseball Analysis</title>
+
+
+  <!-- Bootstrap CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+
+<body>
+
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="home">Pitching Stats</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="hitting">Hitting</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="prediction">Salary Prediction</a>
+        </li>
+
+
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Plots
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="temp.html">Temperature</a>
+            <a class="dropdown-item" href="humid.html">Humidity</a>
+            <a class="dropdown-item" href="cloud.html">Cloudiness</a>
+            <a class="dropdown-item" href="wind.html">Wind</a>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- 2x2 container -->
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+
+
+
+        <!-- Div to put bar chart -->
+        <div class='wrapper'>
+          <div class="container d-flex flex-column justify-content-center align-items-center">
+            <div class="title text-center mb-5">
+              <h2>Which Pitching Stats contribute to a Higher Salary?</h2>
+            </div>
+            <div class="chart-wrapper">
+              <canvas id="myChart1"></canvas>
+            </div>
+          </div>
+        </div>
+
+         <!-- Div to card -->
+        <div class="card" style="width: 50rem;">
+          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">The data used for this application includes starting pitchers from 2010-2016 that had at least 10 starts in a given year.</p>
+            <p class="card-text">Click the link below to download the data.</p>
+            <a href="http://www.seanlahman.com/baseball-archive/statistics/" class="btn btn-primary">Link to Data</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col">
+
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Stat</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SO</td>
+              <td>Strikeouts</td>
+            </tr>
+            <tr>
+              <td>BAOpp</td>
+              <td>Opponent's Batting Average</td>
+            </tr>
+            <tr>
+              <td>ERA</td>
+              <td>Earned Run Average</td>
+            </tr>
+            <tr>
+              <td>SV</td>
+              <td>Saves</td>
+            </tr>
+            <tr>
+              <td>GF</td>
+              <td>Games Finished</td>
+            </tr>
+            <tr>
+              <td>IPouts</td>
+              <td>Outs Pitched</td>
+            </tr>
+            <tr>
+              <td>W</td>
+              <td>Wins</td>
+            </tr>
+            <tr>
+              <td>BFP</td>
+              <td>Batters Faced By Pitcher</td>
+            </tr>
+            <tr>
+              <td>CG</td>
+              <td>Complete Games</td>
+            </tr>
+            <tr>
+              <td>ER</td>
+              <td>Earned Runs</td>
+            </tr>
+            <tr>
+              <td>R</td>
+              <td>Runs Allowed</td>
+            </tr>
+            <tr>
+              <td>HR</td>
+              <td>Homeruns Allowed</td>
+            </tr>
+            <tr>
+              <td>BB</td>
+              <td>Walks</td>
+            </tr>
+            <tr>
+              <td>H</td>
+              <td>Hits Allowed</td>
+            </tr>
+            <tr>
+              <td>L</td>
+              <td>Losses</td>
+            </tr>
+            <tr>
+              <td>WP</td>
+              <td>Wild Pitches</td>
+            </tr>
+            <tr>
+              <td>GIDP</td>
+              <td>Grounded into double plays by opposing batter</td>
+            </tr>
+            <tr>
+              <td>IBB</td>
+              <td>Intentional Walks</td>
+            </tr>
+            <tr>
+              <td>SHO</td>
+              <td>Shutouts</td>
+            </tr>
+            <tr>
+              <td>HBP</td>
+              <td>Batters Hit by Pitch</td>
+            </tr>
+            <tr>
+              <td>SH</td>
+              <td>Sacrifices by opposing batters</td>
+            </tr>
+            <tr>
+              <td>BK</td>
+              <td>Balks</td>
+            </tr>
+            <tr>
+              <td>SF</td>
+              <td>Sacrifice flies by opposing batters</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <!-- d3 JavaScript -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+  <!-- Our JS -->
+  <script type="text/javascript" src="static/js/bar2.js"></script>
+
+</body>
+
+</html>
