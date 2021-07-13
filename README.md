@@ -1,4 +1,4 @@
-# final-project
+# Baseball Analytics
 
 Data: http://www.seanlahman.com/baseball-archive/statistics/
 
