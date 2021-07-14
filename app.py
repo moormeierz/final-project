@@ -42,7 +42,7 @@ def submit():
   
 
     # load model
-    model = load("pitcher_model_10_starts.joblib")
+    model = load("pitcher_model.joblib")
     prediction = model.predict(features)[0]
     print(prediction)
     return render_template('prediction.html', prediction = prediction)
