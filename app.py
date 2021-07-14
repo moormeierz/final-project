@@ -8,7 +8,7 @@ import pandas as pd
 app = Flask(__name__)
 
 
-engine = create_engine('sqlite:///pitching.sqlite', echo=False)
+engine = create_engine('sqlite:///pitching2.sqlite', echo=False)
 
 
 @app.route("/")
@@ -52,8 +52,8 @@ def submit():
 @app.route("/data")
 def data():
 
-    new_df = pd.read_sql('pitching_stats', engine)
-    result = new_df.to_json(orient='records')
+    sql_df = pd.read_sql('pitching_stats', engine)
+    result = sql_df.to_json(orient='records')
 
 
     return result
