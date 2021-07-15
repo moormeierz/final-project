@@ -1,4 +1,4 @@
-# Baseball Analytics
+# Baseball Salary Prediction
 
 The goal of this application is to predict starting pitcher's salary. Every year, general managers must decide whether to resign their team’s free agents or pursue other team’s free agents.  I decided to create an application that could help aid in that decision making.
 
