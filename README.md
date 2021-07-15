@@ -36,3 +36,16 @@ Strikeouts, BAOpp, and ERA are the statistics chosen for the logistic regression
 
 ## Model Accuracy
 
+![image](https://github.com/moormeierz/final-project/blob/main/images/predictions.PNG?raw=true)
+
+1) In baseball, teams have control of their players for 6 years once they enter the league.  It takes 6 years for a player to earn a big contract.  A player could be playing at an all-star level but only getting paid 500,000.  
+
+2) Some players earn big contracts and then underperform.  Especially older players that sign multi-year deals.  Older players that sign huge deals usually underperform the last couple years of their contract. 
+
+The data used to train the model is full of these instances.  That’s why the first 10 predictions seem off.
+
+In order for the model to be more accurate, a data set of free agents who just signed a new deal would be needed.  The dataset would also need to contain stats from the previous year.  Since those are the stats that determined the value of the contract.
+This would be the ideal dataset to train the model because it eliminates players on their rookie deal and players on expiring contracts.
+
+
+
