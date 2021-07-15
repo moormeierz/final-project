@@ -38,6 +38,8 @@ Strikeouts, BAOpp, and ERA are the statistics chosen for the logistic regression
 
 ![image](https://github.com/moormeierz/final-project/blob/main/images/predictions.PNG?raw=true)
 
+There are two major reasons why the model isn't as accurate as it could be.
+
 1) In baseball, teams have control of their players for 6 years once they enter the league.  It takes 6 years for a player to earn a big contract.  A player could be playing at an all-star level but only getting paid 500,000.  
 
 2) Some players earn big contracts and then underperform.  Especially older players that sign multi-year deals.  Older players that sign huge deals usually underperform the last couple years of their contract. 
